@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>meme id list</title>
+    <script src="js/library/jquery-2.1.1.min.js"></script>
+    <style>
+
+    .meme_container {
+        margin-bottom: 40px;
+        border-bottom: 1px dotted #333;
+        max-width: 600px;
+        padding-bottom: 30px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="meme_list"></div>
+    <script>
+
+    $.get( "http://mvdigitalmedia.com/fastcompany/slack/memebot/fetch_memes.php", function( data ) {
+        //console.log( data );
+        var json_data = $.parseJSON(data);
+        $.each(json_data.data.memes, function(index, meme) {
+            console.log('meme name: ', meme.name);
+            console.log('meme id: ', meme.id);
+            console.log('meme url: ', meme.url);
+            console.log('_________');
+            $('#meme_list').append(
+                '<div class="meme_container">' +
+                    '<div class="meme_name">' + meme.name + '</div>' +
+                    '<div class="meme_id">' + meme.id + '</div>' +
+                    '<div class="meme_image"><img src="' + meme.url + '" /></div>' +
+                '</div>'
+            );
+        });
+    });
+
+    </script>
+</body>
+
+</html>
