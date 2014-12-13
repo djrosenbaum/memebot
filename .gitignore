@@ -1,0 +1,38 @@
+#IGNORE GRAPHIC ASSETS
+*.ai
+*.gif
+*.jpg
+*.jpeg
+*.png
+*.psd
+*.swf
+
+#IGNORE VIDEO ASSETS
+*.flv
+*.mov
+*.mp4
+*.ogv
+*.webm
+
+#IGNORE COMPRESSED FILES
+*.zip
+*.rar
+*.gz
+
+#IGNORE FONTS
+*.eot
+*.otf
+*.svg
+*.ttf
+*.woff
+
+#IGNORE THE FOLLOWING FILES
+.DS_STORE
+dwsync.xml
+info.txt
+
+#IGNORE THE FOLLOWING DIRECTORIES
+assets/
+resources/
+node_modules/
+js/library
